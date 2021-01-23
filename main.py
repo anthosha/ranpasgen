@@ -6,13 +6,14 @@ sSR = secrets.SystemRandom()
 
 
 def ranpas(n_symb=8):
-    pattern = 'abcdefghijklmnopqrstuvwxyz0123456789_!@%*ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    password = sample(pattern, n_symb)
+    pattern1 = '0123456789'
+    pattern2 = 'abcdefghijklmnopqrstuvwxyz'
+    pattern3 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    pattern4 = '_!@%*-+'
+    password = sample(pattern1+pattern2+pattern3+pattern4, n_symb)
     print(''.join(password))
 
 
 if __name__ == '__main__':
     ranpas()
     input()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
